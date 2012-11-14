@@ -106,3 +106,16 @@ background-color: #6B66FF;}
 #sellbuy ul li a:visited {
 	text-decoration: none;
 }
+
+#jointable th, td {
+	border:2px solid black;
+	background-color: #D5D5D5;
+}
+#join{
+	float:left;
+}
+
+#login{
+	width:1336px;
+	float:left;
+}

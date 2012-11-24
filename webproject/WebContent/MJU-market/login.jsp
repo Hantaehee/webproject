@@ -43,8 +43,8 @@ pageEncoding="UTF-8"%>
             </p>
             <ul class="nav">
               <li><a href="main.jsp">Home</a></li>
-              <li><a href="login.jsp">Log in</a></li>
-              <li class="active"><a href="join.jsp">Join us</a></li>
+              <li class="active"><a href="login.jsp">Log in</a></li>
+              <li><a href="join.jsp">Join us</a></li>
             </ul>
           </div>
         </div>
@@ -79,40 +79,17 @@ pageEncoding="UTF-8"%>
             <a href="main.jsp">main logo</a>
           </div>
           <div class="row-fluid">
-          <form action="register.jsp" method="post">
-          <table>
-					<tr>
-			<th>*이름</th>
-			<td><input type="Text" name="name" value=""></td>
-		</tr>
-		<tr>
-			<th>*아이디</th>
-			<td><input type="Text" name="userid" value=""></td>
-		</tr>
-		<tr>
-			<th>*비밀번호</th>
-			<td><input type="Password" name="pwd" value=""></td>
-		</tr>
-		<tr>
-		<th>*비밀번호확인</th>
-		<td><input type="password" name="pwd_confirm" value=""></td>
-		</tr>
-		<tr>
-			<th>*거주지</th>
-			<td><select name="hometown" size="1"><option value="">서울</option><option value="">경기</option>
-			<option value="">충청도</option><option value="">전라도</option>
-			<option value="">경상도</option>
-			<option value="">제주도</option></select></td>
-		</tr>
-		<tr>
-			<th>*E-Mail</th>
-			<td><input type="Text" name="email" value=""></td>
-		</tr>
-		<tr>
-			<td colspan="2"><input type="submit" name="finjoin-btn" value="JOIN"></td>
-		</tr>
-		</table>
-		</form>
+           <table>
+						<tr>
+						<th>ID</th>
+						<td><input type="Text" name="login ID" value=""></td>
+						<td rowspan="2"><input type="button" name="submit" value="로그인"></td>
+						</tr>
+						<tr>
+						<th>Password</th>
+						<td><input type="Password" name="login password" value=""></td>
+						</tr>
+					</table>
           </div>
         </div>
       </div>

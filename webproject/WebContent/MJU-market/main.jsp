@@ -4,7 +4,7 @@ pageEncoding="UTF-8"%>
 <html lang="ko">
   <head>
     <meta charset="UTF-8">
-    <title>RECYCLE Market</title>
+    <title>RECYCLE-Market</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -43,10 +43,10 @@ pageEncoding="UTF-8"%>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Project name</a>
+          <a class="brand" href="#">Recycle-Market</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
-              Logged in as <a href="#" class="navbar-link">Username</a>
+              <a href="#" class="navbar-link">Username</a>님 환영합니다.
             </p>
             <ul class="nav">
               <li class="active"><a href="main.jsp">Home</a></li>

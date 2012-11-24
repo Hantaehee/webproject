@@ -5,7 +5,7 @@
  PreparedStatement stmt = null;
  ResultSet rs = null;
 
- String dbUrl = "jdbc:mysql://localhost:3306/web2012";
+ String dbUrl = "jdbc:mysql://localhost:8080/webproject/MJU-market";
  String dbUser = "web";
  String dbPassword = "asdf";
 
@@ -27,7 +27,7 @@
  if (pwd = null || pwd.length() < 6 ) {
  errorMsg.add("비밀번호를 입력하세요(6자이상).");
 }
- if (pwd_confirm = null || (!pwd.equals(pwd_confirm)) {
+ if (pwd_confirm = null || (pwd!=(pwd_confirm))  {
  errorMsg.add("비밀번호를 확인해주세요.");
 }
  if (name = null || name.trim().length() == 0) {

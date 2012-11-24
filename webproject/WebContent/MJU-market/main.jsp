@@ -1,7 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="EUC_KR">
+    <meta charset="UTF-8">
     <title>RECYCLE Market</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -62,9 +64,9 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">BOOKS</li>
-              <li class="active"><a href="#">전공서적</a></li>
+              <li class="active"><a href="#">전공서적</a></li>
               <li><a href="#">교양서적</a></li>
-              <li><a href="#">기타서적</a></li>
+              <li><a href="#">기타서적</a></li>
               <li class="nav-header">CLOTHES</li>
               <li><a href="#">outer</a></li>
               <li><a href="#">top</a></li>
@@ -72,8 +74,8 @@
               <li><a href="#">acc/bags</a></li>
               <li><a href="#">shoes</a></li>
               <li class="nav-header">ELECTRONICS</li>
-              <li><a href="#">핸드폰 관련 전자기기</a></li>
-              <li><a href="#">컴퓨터 관련 전자기기</a></li>
+              <li><a href="#">핸드폰 관련 기기</a></li>
+              <li><a href="#">컴퓨터 관련 기기</a></li>
               <li><a href="#">기타 전자기기</a></li>
               <li class="nav-header">ETC</li>
             </ul>

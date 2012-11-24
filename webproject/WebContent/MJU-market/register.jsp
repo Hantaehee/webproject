@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset= UTF-8" pageEncoding="UTF-8"
- import="java.sql.*" import="java.util.*" import="org.apache.commons.lang3.StringUtils"%>
+<%@ page language="java" contentType="text/html; charset= UTF-8" pageEncoding="UTF-8"%>
 
  <%
  Connection conn = null;
@@ -92,8 +91,6 @@
 <div class="alert alert-success">
 <b><%= name %></b>님 회원가입을 환영합니다!
 </div>
-<div class="form-action">
-<a href="main.jsp class="btn">홈으로</a></div>
 <%}%>
 </div>
 </body>

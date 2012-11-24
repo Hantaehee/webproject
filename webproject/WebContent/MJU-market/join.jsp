@@ -1,7 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="EUC-KR">
+    <meta charset="UTF-8">
     <title>RECYCLE Market</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -18,6 +20,17 @@
     </style>
     <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
 
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
   </head>
 
   <body>
@@ -38,9 +51,9 @@
             <ul class="nav">
               <li class="active"><a href="main.jsp">Home</a></li>
               <li><a href="login.jsp">Log in</a></li>
-              <li><a href="Join.jsp">Join us</a></li>
+              <li><a href="join.jsp">Join us</a></li>
             </ul>
-          </div><!--/.nav-collapse -->
+          </div>
         </div>
       </div>
     </div>
@@ -51,9 +64,9 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">BOOKS</li>
-              <li class="active"><a href="#">전공서적</a></li>
+              <li class="active"><a href="#">전공서적</a></li>
               <li><a href="#">교양서적</a></li>
-              <li><a href="#">기타서적</a></li>
+              <li><a href="#">기타서적</a></li>
               <li class="nav-header">CLOTHES</li>
               <li><a href="#">outer</a></li>
               <li><a href="#">top</a></li>
@@ -61,26 +74,55 @@
               <li><a href="#">acc/bags</a></li>
               <li><a href="#">shoes</a></li>
               <li class="nav-header">ELECTRONICS</li>
-              <li><a href="#">핸드폰 관련 전자기기</a></li>
-              <li><a href="#">컴퓨터 관련 전자기기</a></li>
+              <li><a href="#">핸드폰 관련 기기</a></li>
+              <li><a href="#">컴퓨터 관련 기기</a></li>
               <li><a href="#">기타 전자기기</a></li>
               <li class="nav-header">ETC</li>
             </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
+          </div>
+        </div>
         <div class="span9">
           <div class="hero-unit">
             <a href="main.jsp">main logo</a>
           </div>
           <div class="row-fluid">
-            <div class="span4">
-           <jsp:include page="signup.jsp">
-  <jsp:param name="current" value="sing UP"/>
-</jsp:include>
-                          </div><!--/span-->
-          </div><!--/row-->
-        </div><!--/span-->
-      </div><!--/row-->
+          <form action="register.jsp" method="post">
+          <table>
+					<tr>
+			<th>*이름</th>
+			<td><input type="Text" name="name" value=""></td>
+		</tr>
+		<tr>
+			<th>*아이디</th>
+			<td><input type="Text" name="userid" value=""></td>
+		</tr>
+		<tr>
+			<th>*비밀번호</th>
+			<td><input type="Password" name="pwd" value=""></td>
+		</tr>
+		<tr>
+		<th>*비밀번호확인</th>
+		<td><input type="password" name="confirm_pwd value=""></td>
+		</tr>
+		<tr>
+			<th>*거주지</th>
+			<td><select name="hometown" size="1"><option value="">서울</option><option value="">경기</option>
+			<option value="">충청도</option><option value="">전라도</option>
+			<option value="">경상도</option>
+			<option value="">제주도</option></select></td>
+		</tr>
+		<tr>
+			<th>*E-Mail</th>
+			<td><input type="Text" name="email" value=""></td>
+		</tr>
+		<tr>
+			<td colspan="2"><input type="submit" name="finjoin-btn" value="JOIN"></td>
+		</tr>
+		</table>
+		</form>
+          </div>
+        </div>
+      </div>
 
       <hr>
 
@@ -88,11 +130,7 @@
         <p>&copy; Myeong-ji univ. Computer Engineering 60092457 Han taehee | 60092389 Park joonbyeong</p>
       </footer>
 
-    </div><!--/.fluid-container-->
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+    </div>
     <script src="./js/jquery.js"></script>
     <script src="./js/bootstrap-transition.js"></script>
     <script src="./js/bootstrap-alert.js"></script>

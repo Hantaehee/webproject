@@ -79,17 +79,7 @@ pageEncoding="UTF-8"%>
             <a href="main.jsp">main logo</a>
           </div>
           <div class="row-fluid">
-           <table>
-						<tr>
-						<th>ID</th>
-						<td><input type="Text" name="login ID" value=""></td>
-						<td rowspan="2"><input type="button" name="submit" value="로그인"></td>
-						</tr>
-						<tr>
-						<th>Password</th>
-						<td><input type="Password" name="login password" value=""></td>
-						</tr>
-					</table>
+        <jsp:include page="loginlg.jsp"></jsp:include>
           </div>
         </div>
       </div>

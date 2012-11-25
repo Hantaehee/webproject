@@ -78,17 +78,18 @@ pageEncoding="UTF-8"%>
           <div class="hero-unit">
             <a href="main.jsp">main logo</a>
           </div>
-          <div class="row-fluid">
+          <div class="row-fluid">      
           <form action="register.jsp" method="post">
           <table>
+          <tr>
+			<th>*아이디</th>
+			<td><input type="Text" name="userid" value=""></td>
+		</tr>
 					<tr>
 			<th>*이름</th>
 			<td><input type="Text" name="name" value=""></td>
 		</tr>
-		<tr>
-			<th>*아이디</th>
-			<td><input type="Text" name="userid" value=""></td>
-		</tr>
+		
 		<tr>
 			<th>*비밀번호</th>
 			<td><input type="Password" name="pwd" value=""></td>

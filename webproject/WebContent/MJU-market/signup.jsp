@@ -31,7 +31,7 @@ title = "RECYCLE Market - JOIN page";%>
 		</tr>
 		<tr>
 			<th>*거주지</th>
-			<td><select name="hometown" size="1"><option value>서울</option><option value>경기</option><option value>충청도</option><option value>전라도</option><option value>경상도</option><option value>제주도</option></select></td>
+			<td><select name="hometown" size="1"><option value="">서울</option><option value="">경기</option><option value="">충청도</option><option value="">전라도</option><option value="">경상도</option><option value="">제주도</option></select></td>
 		</tr>
 		<tr>
 			<th>*E-Mail</th>

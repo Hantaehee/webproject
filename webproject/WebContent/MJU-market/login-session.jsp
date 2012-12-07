@@ -39,7 +39,8 @@ if(rs.getString("userid").equals(userid) && rs.getString("pwd").equals(pwd))
 	session.setAttribute("name",rs.getString("name"));
 	response.sendRedirect("main_ok.jsp");
 }else{
-	out.println("아이디와 비밀번호를 확인해주세요");}
+	out.println("아이디와 비밀번호를 확인해주세요");%>
+	<br/><a href="login.jsp">다시 로그인하기</a><%}
 }
 }catch(ClassNotFoundException e){e.printStackTrace();}
 

@@ -5,6 +5,13 @@ String userid =request.getParameter("userid");
 String name = "";
 session.setAttribute(name,"userid");
 %>
+
+<%
+if(session.getAttribute(userid) == null){
+ out.println("로그인 후에 이용해주세요");%>
+ <br/><a href="main.jsp">Home으로</a>
+ <%
+} else {%>
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -50,7 +57,6 @@ session.setAttribute(name,"userid");
               <li class="active"><a href="main.jsp">Home</a></li>
               <li><a href="logout.jsp">Log-out</a></li>
               <li><a href="flogin">Log in as facebook</a><li>
-              <li><a href="join.jsp">Join us</a></li>
               
             </ul>
           </div>
@@ -68,7 +74,7 @@ session.setAttribute(name,"userid");
               <li><a href="book-cul.jsp">교양서적</a></li>
               <li><a href="book-etc.jsp">기타서적</a></li>
               <li class="nav-header">CLOTHES</li>
-              <li><a href="clothes-outer.jsp">outer</a></li>
+              <li class="active"><a href="clothes-outer.jsp">outer</a></li>
               <li><a href="clothes-top.jsp">top</a></li>
               <li><a href="clothes-bottom.jsp">bottom</a></li>
               <li><a href="clothes-acc.jsp">acc/bags</a></li>
@@ -87,8 +93,38 @@ session.setAttribute(name,"userid");
             <a href="main.jsp"><img src="./images/logo.jpg"/></a>
           </div>
           <div class="row-fluid">
-            <a href="logout.jsp">LOG OUT</a>
-						<a href="main_ok.jsp?<%=userid %>">Home으로 가기</a>
+            <div class="span4">
+              <h2>Heading</h2>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p><a class="btn" href="#">View details &raquo;</a></p>
+            </div><!--/span-->
+            <div class="span4">
+              <h2>Heading</h2>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p><a class="btn" href="#">View details &raquo;</a></p>
+            </div><!--/span-->
+            <div class="span4">
+              <h2>Heading</h2>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p><a class="btn" href="#">View details &raquo;</a></p>
+            </div><!--/span-->
+          </div><!--/row-->
+          <div class="row-fluid">
+            <div class="span4">
+              <h2>Heading</h2>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p><a class="btn" href="#">View details &raquo;</a></p>
+            </div><!--/span-->
+            <div class="span4">
+              <h2>Heading</h2>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p><a class="btn" href="#">View details &raquo;</a></p>
+            </div><!--/span-->
+            <div class="span4">
+              <h2>Heading</h2>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p><a class="btn" href="#">View details &raquo;</a></p>
+            </div>
           </div>
         </div>
       </div>
@@ -113,6 +149,6 @@ session.setAttribute(name,"userid");
     <script src="./js/bootstrap-collapse.js"></script>
     <script src="./js/bootstrap-carousel.js"></script>
     <script src="./js/bootstrap-typeahead.js"></script>
-
+<%} %>
   </body>
 </html>

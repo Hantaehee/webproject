@@ -5,6 +5,13 @@ String userid =request.getParameter("userid");
 String name = "";
 session.setAttribute(name,"userid");
 %>
+
+<%
+if(session.getAttribute(userid) == null){
+ out.println("로그인 후에 이용해주세요");%>
+ <br/><a href="main.jsp">Home으로</a>
+ <%
+} else {%>
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -50,7 +57,6 @@ session.setAttribute(name,"userid");
               <li class="active"><a href="main.jsp">Home</a></li>
               <li><a href="logout.jsp">Log-out</a></li>
               <li><a href="flogin">Log in as facebook</a><li>
-              <li><a href="join.jsp">Join us</a></li>
               
             </ul>
           </div>
@@ -76,7 +82,7 @@ session.setAttribute(name,"userid");
               <li class="nav-header">ELECTRONICS</li>
               <li><a href="elec-phone.jsp">핸드폰 관련 기기</a></li>
               <li><a href="elec-com.jsp">컴퓨터 관련 기기</a></li>
-              <li><a href="elec-etc.jsp">기타 전자기기</a></li>
+              <li class="active"><a href="elec-etc.jsp">기타 전자기기</a></li>
               <li class="nav-header">ETC</li>
               <li><a href="etc.jsp">기타물품</a></li>
             </ul>
@@ -87,8 +93,38 @@ session.setAttribute(name,"userid");
             <a href="main.jsp"><img src="./images/logo.jpg"/></a>
           </div>
           <div class="row-fluid">
-            <a href="logout.jsp">LOG OUT</a>
-						<a href="main_ok.jsp?<%=userid %>">Home으로 가기</a>
+            <div class="span4">
+              <h2>Heading</h2>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p><a class="btn" href="#">View details &raquo;</a></p>
+            </div><!--/span-->
+            <div class="span4">
+              <h2>Heading</h2>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p><a class="btn" href="#">View details &raquo;</a></p>
+            </div><!--/span-->
+            <div class="span4">
+              <h2>Heading</h2>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p><a class="btn" href="#">View details &raquo;</a></p>
+            </div><!--/span-->
+          </div><!--/row-->
+          <div class="row-fluid">
+            <div class="span4">
+              <h2>Heading</h2>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p><a class="btn" href="#">View details &raquo;</a></p>
+            </div><!--/span-->
+            <div class="span4">
+              <h2>Heading</h2>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p><a class="btn" href="#">View details &raquo;</a></p>
+            </div><!--/span-->
+            <div class="span4">
+              <h2>Heading</h2>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p><a class="btn" href="#">View details &raquo;</a></p>
+            </div>
           </div>
         </div>
       </div>
@@ -113,6 +149,6 @@ session.setAttribute(name,"userid");
     <script src="./js/bootstrap-collapse.js"></script>
     <script src="./js/bootstrap-carousel.js"></script>
     <script src="./js/bootstrap-typeahead.js"></script>
-
+<%} %>
   </body>
 </html>

@@ -77,44 +77,22 @@ pageEncoding="UTF-8"%>
         </div>
         <div class="span9">
           <div class="hero-unit">
-            <a href="main.jsp">main logo</a>
+            <a href="main.jsp"><img src="./images/logo.jpg" alt="main logo"/></a>
           </div>
           <div class="row-fluid">      
-          <form action="register.jsp" method="post">
-          <table>
-          <tr>
-			<th>*아이디</th>
-			<td><input type="Text" name="userid" value=""></td>
-		</tr>
-					<tr>
-			<th>*이름</th>
-			<td><input type="Text" name="name" value=""></td>
-		</tr>
-		
-		<tr>
-			<th>*비밀번호</th>
-			<td><input type="Password" name="pwd" value=""></td>
-		</tr>
-		<tr>
-		<th>*비밀번호확인</th>
-		<td><input type="password" name="pwd_confirm" value=""></td>
-		</tr>
-		<tr>
-			<th>*거주지</th>
-			<td><select name="hometown" size="1"><option value="seoul">서울</option><option value="kyeong-ki">경기</option>
-			<option value="choong-chung">충청도</option><option value="jeon-ra">전라도</option>
-			<option value="kyeongsang">경상도</option>
-			<option value="jeju">제주도</option></select></td>
-		</tr>
-		<tr>
-			<th>*E-Mail</th>
-			<td><input type="Text" name="email" value=""></td>
-		</tr>
-		<tr>
-			<td colspan="2"><input type="submit" name="finjoin-btn" value="JOIN"></td>
-		</tr>
-		</table>
-		</form>
+          <% String log_check = (String)session.getAttribute("userid");
+					boolean login = log_check == null ? false : true;
+					%>
+
+					<%if(login){
+					session.invalidate();
+					%>
+					로그아웃되었습니다
+					<a href="main.jsp">Home으로가기</a>
+					<% }else { %>
+					로그인이 되어있지 않습니다
+					<jsp:forward page="login.jsp"/>
+					<% } %>
           </div>
         </div>
       </div>

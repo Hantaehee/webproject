@@ -7,7 +7,7 @@ import="java.util.*" import="java.sql.*" %>
  ResultSet rs = null;
  
 
- String dbUrl = "jdbc:mysql://localhost:3306/users";
+ String dbUrl = "jdbc:mysql://localhost:3306/users? CharacterEncoding=utf8";
  String dbUser = "web";
  String dbPassword = "123";
  Class.forName("com.mysql.jdbc.Driver");
@@ -84,7 +84,7 @@ import="java.util.*" import="java.sql.*" %>
 </ul>
 </div>
 <div class="form-action">
-<a onclick="histroy.back();" class="btn">뒤로 돌아가기 </a>
+<a href="join.jsp">뒤로 돌아가기 </a>
 </div>
 <% } else if(result == 1) { %>
 <div class="alert alert-success">

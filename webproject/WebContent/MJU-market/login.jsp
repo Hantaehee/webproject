@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -24,8 +25,16 @@ pageEncoding="UTF-8"%>
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
-  </head>
-
+  
+  <script type="text/javascript">
+  function logging()
+  {
+	  if(document.loginForm.userid.value=="")alert("아이디를 입력해 주세요")
+	  else if(document.loginForm.pwd.value=="")alert("비밀번호를 입력해 주세요")
+	  else document.loginForm.submit();
+  }
+  </script>
+</head>
   <body>
 
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -39,11 +48,12 @@ pageEncoding="UTF-8"%>
           <a class="brand" href="#">Recycle-Market</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
-              <a href="#" class="navbar-link">Username</a>님 환영합니다.
+              <a href="#" class="navbar-link">username</a>님 환영합니다.
             </p>
             <ul class="nav">
               <li><a href="main.jsp">Home</a></li>
               <li class="active"><a href="login.jsp">Log in</a></li>
+              <li><a href="flogin">Log in as facebook</a><li>
               <li><a href="join.jsp">Join us</a></li>
             </ul>
           </div>
@@ -76,10 +86,15 @@ pageEncoding="UTF-8"%>
         </div>
         <div class="span9">
           <div class="hero-unit">
-            <a href="main.jsp">main logo</a>
+            <a href="main.jsp"><img src="./images/logo.jpg"/></a>
           </div>
-          <div class="row-fluid">
-        <jsp:include page="loginlg.jsp"></jsp:include>
+          <div class="row-fluid">          
+        		<form name="loginForm" action="login-session.jsp" method="post">
+	  					ID: <input type="text" name="userid">
+	  					Password: <input type="password" name="pwd">
+	  					<input type="submit" value="login">
+  					</form>
+  					<a href="join.jsp">회원 가입하기</a>
           </div>
         </div>
       </div>

@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
+<% 
+String userid =request.getParameter("userid");
+String name = "";
+session.setAttribute(name,"userid");
+%>
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -39,13 +44,13 @@ pageEncoding="UTF-8"%>
           <a class="brand" href="#">Recycle-Market</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
-              <a href="#" class="navbar-link">Username</a>님 환영합니다.
+              <a href="#" class="navbar-link"><%=session.getAttribute("name") %></a>님 환영합니다.
             </p>
             <ul class="nav">
-              <li><a href="main.jsp">Home</a></li>
-              <li><a href="login.jsp">Log in</a></li>
+              <li class="active"><a href="main.jsp">Home</a></li>
+              <li><a href="logout.jsp">Log-out</a></li>
               <li><a href="flogin">Log in as facebook</a><li>
-              <li class="active"><a href="join.jsp">Join us</a></li>
+              
             </ul>
           </div>
         </div>
@@ -77,44 +82,41 @@ pageEncoding="UTF-8"%>
         </div>
         <div class="span9">
           <div class="hero-unit">
-            <a href="main.jsp">main logo</a>
+            <a href="main.jsp"><img src="./images/logo.jpg"/></a>
           </div>
-          <div class="row-fluid">      
-          <form action="register.jsp" method="post">
-          <table>
-          <tr>
-			<th>*아이디</th>
-			<td><input type="Text" name="userid" value=""></td>
-		</tr>
-					<tr>
-			<th>*이름</th>
-			<td><input type="Text" name="name" value=""></td>
-		</tr>
-		
-		<tr>
-			<th>*비밀번호</th>
-			<td><input type="Password" name="pwd" value=""></td>
-		</tr>
-		<tr>
-		<th>*비밀번호확인</th>
-		<td><input type="password" name="pwd_confirm" value=""></td>
-		</tr>
-		<tr>
-			<th>*거주지</th>
-			<td><select name="hometown" size="1"><option value="seoul">서울</option><option value="kyeong-ki">경기</option>
-			<option value="choong-chung">충청도</option><option value="jeon-ra">전라도</option>
-			<option value="kyeongsang">경상도</option>
-			<option value="jeju">제주도</option></select></td>
-		</tr>
-		<tr>
-			<th>*E-Mail</th>
-			<td><input type="Text" name="email" value=""></td>
-		</tr>
-		<tr>
-			<td colspan="2"><input type="submit" name="finjoin-btn" value="JOIN"></td>
-		</tr>
-		</table>
-		</form>
+          <div class="row-fluid">
+            <div class="span4">
+              <h2>Heading</h2>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p><a class="btn" href="#">View details &raquo;</a></p>
+            </div><!--/span-->
+            <div class="span4">
+              <h2>Heading</h2>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p><a class="btn" href="#">View details &raquo;</a></p>
+            </div><!--/span-->
+            <div class="span4">
+              <h2>Heading</h2>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p><a class="btn" href="#">View details &raquo;</a></p>
+            </div><!--/span-->
+          </div><!--/row-->
+          <div class="row-fluid">
+            <div class="span4">
+              <h2>Heading</h2>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p><a class="btn" href="#">View details &raquo;</a></p>
+            </div><!--/span-->
+            <div class="span4">
+              <h2>Heading</h2>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p><a class="btn" href="#">View details &raquo;</a></p>
+            </div><!--/span-->
+            <div class="span4">
+              <h2>Heading</h2>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p><a class="btn" href="#">View details &raquo;</a></p>
+            </div>
           </div>
         </div>
       </div>

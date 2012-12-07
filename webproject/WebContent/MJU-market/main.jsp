@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
+<% 
+String userid =request.getParameter("userid");
+String name = "";
+session.setAttribute(name,"userid");
+%>
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -39,12 +44,14 @@ pageEncoding="UTF-8"%>
           <a class="brand" href="#">Recycle-Market</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
-              <a href="#" class="navbar-link">Username</a>님 환영합니다.
+              <a href="#" class="navbar-link"><%=session.getAttribute("name") %></a>님 환영합니다.
             </p>
             <ul class="nav">
               <li class="active"><a href="main.jsp">Home</a></li>
               <li><a href="login.jsp">Log in</a></li>
+              <li><a href="flogin">Log in as facebook</a><li>
               <li><a href="join.jsp">Join us</a></li>
+              
             </ul>
           </div>
         </div>
@@ -76,7 +83,7 @@ pageEncoding="UTF-8"%>
         </div>
         <div class="span9">
           <div class="hero-unit">
-            <a href="main.jsp">main logo</a>
+            <a href="main.jsp"><img src="./images/logo.jpg"/></a>
           </div>
           <div class="row-fluid">
             <div class="span4">

@@ -7,7 +7,7 @@ session.setAttribute(name,"userid");
 %>
 
 <%
-if(session.getAttribute(userid) == null){
+if(session.getAttribute("userid") == null){
  out.println("로그인 후에 이용해주세요");%>
  <br/><a href="main.jsp">Home으로</a>
  <%

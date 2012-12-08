@@ -47,7 +47,7 @@ session.setAttribute(name,"userid");
               <a href="#" class="navbar-link"><%=session.getAttribute("name") %></a>님 환영합니다.
             </p>
             <ul class="nav">
-              <li class="active"><a href="main.jsp">Home</a></li>
+              <li class="active"><a href="main_ok.jsp">Home</a></li>
               <li><a href="logout.jsp">Log-out</a></li>
               <li><a href="flogin">Log in as facebook</a><li>
               
@@ -87,38 +87,10 @@ session.setAttribute(name,"userid");
           </div>
           <div class="row-fluid">
             <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
+              <p>+물품을 등록하기 위해서는 아래버튼을 클릭해주세요+</p>
+              <p><a class="btn" href="signup.jsp">물품등록 &raquo;</a></p>
             </div><!--/span-->
-            <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
-            </div><!--/span-->
-          </div><!--/row-->
-          <div class="row-fluid">
-            <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
             </div>
-          </div>
         </div>
       </div>
 

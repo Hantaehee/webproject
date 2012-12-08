@@ -7,7 +7,7 @@ import="java.util.*" import="java.sql.*" %>
  ResultSet rs = null;
  
 
- String dbUrl = "jdbc:mysql://localhost:3306/users? CharacterEncoding=utf8";
+ String dbUrl = "jdbc:mysql://localhost:3306/web? CharacterEncoding=utf8";
  String dbUser = "web";
  String dbPassword = "123";
  Class.forName("com.mysql.jdbc.Driver");

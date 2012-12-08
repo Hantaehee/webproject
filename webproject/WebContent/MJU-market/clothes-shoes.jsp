@@ -1,10 +1,32 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8"%>
+pageEncoding="UTF-8" import="java.sql.*"%>
 <% 
 String userid =request.getParameter("userid");
 String name = "";
 session.setAttribute(name,"userid");
 %>
+<%
+//db접속을 위한 준비
+	Connection conn = null;
+	Statement stmt = null;
+	ResultSet rs = null;
+	
+	String dbUrl = "jdbc:mysql://localhost:3306/web2012";
+	String dbUser = "web";
+	String dbPassword = "asdf";
+	
+	// 페이지 설정
+	int pageNo = 1;
+	
+	try {
+		pageNo = Integer.parseInt(request.getParameter("page"));
+	} catch (NumberFormatException ex) {}
+	
+	int numInPage = 10;												// 한페이지에 출력할 아이템 개수
+	int startPos = (pageNo - 1) * numInPage; 	// 몇 번째 아이템 부터 이 페이지에?
+	int numItems, numPages;
+	
+%>    
 
 <%
 if(session.getAttribute("userid") == null){
@@ -54,7 +76,7 @@ if(session.getAttribute("userid") == null){
               <a href="#" class="navbar-link"><%=session.getAttribute("name") %></a>님 환영합니다.
             </p>
             <ul class="nav">
-              <li class="active"><a href="main.jsp">Home</a></li>
+              <li class="active"><a href="main_ok.jsp">Home</a></li>
               <li><a href="logout.jsp">Log-out</a></li>
               <li><a href="flogin">Log in as facebook</a><li>
               
@@ -93,38 +115,7 @@ if(session.getAttribute("userid") == null){
             <a href="main.jsp"><img src="./images/logo.jpg"/></a>
           </div>
           <div class="row-fluid">
-            <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
-            </div><!--/span-->
-          </div><!--/row-->
-          <div class="row-fluid">
-            <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
-            </div>
+            
           </div>
         </div>
       </div>

@@ -39,12 +39,13 @@ pageEncoding="UTF-8"%>
           <a class="brand" href="#">Recycle-Market</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
-              <a href="#" class="navbar-link">Username</a>님 환영합니다.
+              <a href="#" class="navbar-link">Guest</a>님 환영합니다.
             </p>
             <ul class="nav">
               <li><a href="main.jsp">Home</a></li>
               <li><a href="login.jsp">Log in</a></li>
-              <li><a href="flogin">Log in as facebook</a><li>
+              <li><a onclick="facebooklogin()" style="cursor: pointer;">  
+   						<img src="./images/facebook.jpg"/></a><li>
               <li class="active"><a href="join.jsp">Join us</a></li>
             </ul>
           </div>
@@ -101,7 +102,7 @@ pageEncoding="UTF-8"%>
       <hr>
 
       <footer>
-        <p>&copy; Myeong-ji univ. Computer Engineering 60092457 Han taehee | 60092389 Park joonbyeong</p>
+        <p>&copy; Myeong-ji univ. Computer Engineering 60092457 <a href="mailto:djutty@naver.com">Han taehee</a> | 60092389 <a href="mailto:artroy1990@naver.com">Park joonbyeong</a></p>
       </footer>
 
     </div>

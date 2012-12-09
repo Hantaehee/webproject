@@ -14,6 +14,7 @@ session.setAttribute(name,"userid");
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="./css/style.css" rel="stylesheet">
+    <script src='jquery=1.8.2.min.js'></script>
     <style type="text/css">
       body {
         padding-top: 60px;
@@ -30,6 +31,27 @@ session.setAttribute(name,"userid");
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
     <script src="//connect.facebook.net.en_US/all.js"></script>
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js" charset="utf-8"></script>  
+<script type="text/javascript">  
+window.fbAsyncInit = function() {  
+    FB.init({appId: '179854965488472', status: true, cookie: true,xfbml: true});      
+};  
+      
+(function(d){  
+   var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];  
+   if (d.getElementById(id)) {return;}  
+   js = d.createElement('script'); js.id = id; js.async = true;  
+   js.src = "//connect.facebook.net/en_US/all.js";  
+   ref.parentNode.insertBefore(js, ref);  
+ }(document));     
+              
+function facebooklogin() {    
+        FB.login(function(response) {  
+            var fbname;  
+            var accessToken = response.authResponse.accessToken;  
+        }, {scope: 'publish_stream,user_likes'});  
+}  
+</script>  
   </head>
 
   <body>
@@ -50,7 +72,9 @@ session.setAttribute(name,"userid");
             <ul class="nav">
               <li class="active"><a href="main.jsp">Home</a></li>
               <li><a href="login.jsp">Log in</a></li>
-              <li><a class="fb_button fb_button_large" href="FBAuthServlet.do">Log in as facebook</a><li>
+              <li>
+              <a onclick="facebooklogin()" style="cursor: pointer;">  
+   						<img src="./images/facebook.jpg"/></a>  <li>
               <li><a href="join.jsp">Join us</a></li>
               
             </ul>
@@ -88,38 +112,19 @@ session.setAttribute(name,"userid");
             <a href="main.jsp"><img src="./images/logo1.jpg"/></a>
           </div>
           <div class="row-fluid">
-            <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
-            </div><!--/span-->
-          </div><!--/row-->
-          <div class="row-fluid">
-            <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
+            <div class="span6">
+              <h2>공지사항</h2>
+              <p>*사이트 이용전 필독사항*</p>
+                <ul>
+            <li>이 사이트는 중고물품 거래를 위한 중고장터입니다</li>
+            <li>광고글은 통보하지 않고 삭제합니다</li>
+            <li>제품명이 없는 경우 확인 후 하루 뒤에 삭제합니다</li>
+            <li>도난품 거래를 절대 금합니다</li>
+            <li>이메일주소를 정확히 입력해주세요</li>
+            <li>모든 기능은 로그인 후 이용가능합니다</li>
+            </ul>
             </div>
+            
           </div>
         </div>
       </div>
@@ -127,7 +132,7 @@ session.setAttribute(name,"userid");
       <hr>
 
       <footer>
-        <p>&copy; Myeong-ji univ. Computer Engineering 60092457 Han taehee | 60092389 Park joonbyeong</p>
+        <p>&copy; Myeong-ji univ. Computer Engineering 60092457 <a href="mailto:djutty@naver.com">Han taehee</a> | 60092389 <a href="mailto:artroy1990@naver.com">Park joonbyeong</a></p>
       </footer>
 
     </div>

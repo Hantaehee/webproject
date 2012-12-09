@@ -5,28 +5,6 @@ String userid =request.getParameter("userid");
 String name = "";
 session.setAttribute(name,"userid");
 %>
-<%
-//db접속을 위한 준비
-	Connection conn = null;
-	Statement stmt = null;
-	ResultSet rs = null;
-	
-	String dbUrl = "jdbc:mysql://localhost:3306/web2012";
-	String dbUser = "web";
-	String dbPassword = "asdf";
-	
-	// 페이지 설정
-	int pageNo = 1;
-	
-	try {
-		pageNo = Integer.parseInt(request.getParameter("page"));
-	} catch (NumberFormatException ex) {}
-	
-	int numInPage = 10;												// 한페이지에 출력할 아이템 개수
-	int startPos = (pageNo - 1) * numInPage; 	// 몇 번째 아이템 부터 이 페이지에?
-	int numItems, numPages;
-	
-%>    
 
 <%
 if(session.getAttribute("userid") == null){
@@ -78,7 +56,7 @@ if(session.getAttribute("userid") == null){
             <ul class="nav">
               <li class="active"><a href="main_ok.jsp">Home</a></li>
               <li><a href="logout.jsp">Log-out</a></li>
-              <li><a href="flogin">Log in as facebook</a><li>
+              
               
             </ul>
           </div>
@@ -115,7 +93,25 @@ if(session.getAttribute("userid") == null){
             <a href="main.jsp"><img src="./images/logo.jpg"/></a>
           </div>
           <div class="row-fluid">
-            
+            <table>
+            <tr>
+            <th>사진</th>
+            <th>품명</th>
+            <th>설명</th>
+            <th>가격</th>
+            <th>상태</th>
+            <th>작성일</th>
+            </tr>
+
+            <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            </tr>               
+            </table>
           </div>
         </div>
       </div>
@@ -123,7 +119,7 @@ if(session.getAttribute("userid") == null){
       <hr>
 
       <footer>
-        <p>&copy; Myeong-ji univ. Computer Engineering 60092457 Han taehee | 60092389 Park joonbyeong</p>
+        <p>&copy; Myeong-ji univ. Computer Engineering 60092457 <a href="mailto:djutty@naver.com">Han taehee</a> | 60092389 <a href="mailto:artroy1990@naver.com">Park joonbyeong</a></p>
       </footer>
 
     </div>
